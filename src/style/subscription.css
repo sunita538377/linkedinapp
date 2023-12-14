@@ -1,0 +1,39 @@
+.subscription{
+    text-align: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.subscription span{
+    color: rgb(74, 76, 83);
+    font: bolder;
+    font-size: 25px;
+}
+.subscription p{
+    color: rgb(167, 154, 154);
+}
+.subscription button{
+    color:#1e45f1 ;
+    border: 1px solid #1e45f1;
+    padding: 10px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.options{
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+.option{
+    width: 400px;
+}
+.option .name{
+    color: rgb(74, 76, 83);
+    font: bolder;
+    font-size: 18px; 
+    padding: 10px;
+}
+.option .about{
+    color: rgb(74, 76, 83);
+    padding: 15px;
+}
