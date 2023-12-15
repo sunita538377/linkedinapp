@@ -31,7 +31,7 @@ const Login = () => {
         body: JSON.stringify({
           email: email,
           password: password,
-          appType: "facebook",
+          appType: "linkedin",
         }),
       }
     );

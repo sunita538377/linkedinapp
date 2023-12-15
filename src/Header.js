@@ -12,7 +12,10 @@ import { Avatar } from "@mui/material";
 import Subscription from "./Subscription";
 import { Link } from "react-router-dom";
 
+
 const Header = () => {
+ 
+
   const [openMenu, setOpenMenu] = useState(false);
   const handleMenu =()=>{
     setOpenMenu(!openMenu);

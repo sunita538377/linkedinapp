@@ -26,7 +26,7 @@ export const SignUp = () => {
           name: name,
           email: email,
           password: password,
-          appType: "music",
+          appType: "linedin",
         }),
       }
     );
