@@ -1,0 +1,26 @@
+.comments {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.comments .writebox {
+  width: 95%;
+  justify-content: space-between;
+}
+.comments .writebox input {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #666666;
+  padding: 10px;
+  border-radius: 0.5rem;
+}
+.user {
+  display: flex;
+}
+.user p {
+  padding-top: 14px;
+}

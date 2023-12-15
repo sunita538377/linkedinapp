@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   user: null,
   token: null,
-  isAuthenticated: localStorage.getItem("facebook-token") ? true : false,
+  isAuthenticated: localStorage.getItem("linkedin-token") ? true : false,
 };
 
 const authSlice = createSlice({
@@ -12,19 +12,19 @@ const authSlice = createSlice({
   reducers: {
     setUser: (state, action) => {
       state.user = action.payload;
-      localStorage.setItem("facebook-user", JSON.stringify(action.payload));
+      localStorage.setItem("linkedin-user", JSON.stringify(action.payload));
     },
     setToken: (state, action) => {
       state.token = action.payload;
-      localStorage.setItem("facebook-token", action.payload);
+      localStorage.setItem("linkedin-token", action.payload);
       state.isAuthenticated = true;
     },
     logout: (state) => {
       state.user = null;
       state.token = null;
       state.isAuthenticated = false;
-      localStorage.removeItem("facebook-user");
-      localStorage.removeItem("facebook-token");
+      localStorage.removeItem("linkedin-user");
+      localStorage.removeItem("linkedin-token");
     },
   },
 });
