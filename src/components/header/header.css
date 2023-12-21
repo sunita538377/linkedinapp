@@ -82,6 +82,9 @@
   text-decoration: none;
   color: black;
 }
+.header__menu p {
+  font-size: 1.1rem;
+}
 .header__menu .signout {
   display: flex;
   cursor: pointer;

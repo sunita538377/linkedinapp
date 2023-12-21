@@ -86,7 +86,7 @@ const Header = () => {
           {openMenu && (
             <div className="header__menu">
               <Link to={"/premium"}>
-                <h4>Try Premium</h4>
+                <p>Try Premium</p>
               </Link>
               <div className="signout" onClick={handleSignOut}>
                 <LogoutIcon /> Sign Out
