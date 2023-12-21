@@ -73,7 +73,6 @@ const Feed = () => {
         </div>
       </div>
       {feedData?.data?.map((post, index) => {
-        console.log("post.name", post);
         return (
           <Post
             key={index}

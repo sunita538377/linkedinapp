@@ -11,19 +11,24 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import { Avatar } from "@mui/material";
 import Subscription from "../../Subscription";
 import { Link } from "react-router-dom";
+import LogoutIcon from "@mui/icons-material/Logout";
+import { useDispatch } from "react-redux";
+import { logRoles } from "@testing-library/react";
+import { logout } from "../../Redux/Authentication";
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const [searchText, setSearchText] = useState();
   const [searchResults, setSearchResults] = useState([]);
   const user = JSON.parse(localStorage.getItem("linkedin-user"));
+  const dispatch = useDispatch();
   const handleMenu = () => {
     setOpenMenu(!openMenu);
   };
   const handleSearch = async () => {
     try {
       const response = await fetch(
-        `https://academics.newtonschool.co/api/v1/linkedin/post?search={"channel.name":"${searchText}"}`,
+        `https://academics.newtonschool.co/api/v1/linkedin/post?search={"author.name":"${searchText}"}`,
         {
           headers: {
             projectID: "f104bi07c490",
@@ -39,6 +44,9 @@ const Header = () => {
   };
 
   console.log("search result", searchResults);
+  const handleSignOut = () => {
+    dispatch(logout());
+  };
 
   return (
     <div className="header">
@@ -80,6 +88,9 @@ const Header = () => {
               <Link to={"/premium"}>
                 <h4>Try Premium</h4>
               </Link>
+              <div className="signout" onClick={handleSignOut}>
+                <LogoutIcon /> Sign Out
+              </div>
             </div>
           )}
         </div>
