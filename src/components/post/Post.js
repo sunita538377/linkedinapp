@@ -95,8 +95,8 @@ const Post = ({
         <p>{caption}</p>
       </div>
       <div className="like__count">
-        <h5>{likeCount}</h5>
-        <h5>{commentCount}</h5>
+        <h5>{likeCount} likes</h5>
+        <h5>{commentCount} comments</h5>
       </div>
       <div className="post__footer">
         <div className="footer__options" onClick={() => likeHandle(postId)}>
