@@ -1,43 +1,43 @@
 .header {
-   display: flex;
-   background-color: white;
-   padding: 10px 15%;
-   justify-content: space-between;
-   height: 35px;
-   position: sticky;
-   top: 0;
-   margin-bottom: 20px;
-   z-index: 99;
-}
-.header__left {
     display: flex;
-}
-.header__left img{
+    background-color: white;
+    padding: 10px 15%;
+    justify-content: space-between;
+    height: 35px;
+    position: sticky;
+    top: 0;
+    margin-bottom: 20px;
+    z-index: 99;
+  }
+  .header__left {
+    display: flex;
+  }
+  .header__left img {
     height: 30px;
     margin-right: 10px;
-}
-.header__search {
+  }
+  .header__search {
     display: flex;
     align-items: center;
     background-color: #eef3f8;
     padding: 3px 10px;
     border-radius: 5px;
-}
-.header__search  input{
+  }
+  .header__search input {
     background-color: transparent;
     border: 0;
     outline: 0;
     min-width: 220px;
-}
-.header__search  svg{
-   font-size: 20px;
-   color: #333;
-}
-.header__right{
+  }
+  .header__search svg {
+    font-size: 20px;
+    color: #333;
+  }
+  .header__right {
     display: flex;
     align-items: center;
-}
-.header__options{
+  }
+  .header__options {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,34 +46,43 @@
     color: #565656;
     cursor: pointer;
     position: relative;
-}
-.header__options:first-child {
-     color: #000;
-}
-.header__options:first-child::before{
-    content: '';
+  }
+  .header__options:first-child {
+    color: #000;
+  }
+  .header__options:first-child::before {
+    content: "";
     position: absolute;
     left: -10px;
     right: -10px;
     background-color: #333;
     height: 1px;
     bottom: -5px;
-}
-.header__options .MuiAvatar-circular{
+  }
+  .header__options .MuiAvatar-circular {
     width: 30px;
     height: 30px;
     object-fit: contain;
-}
-.userMenu{
+  }
+  .userMenu {
     position: relative;
-}
-.header__menu{
+  }
+  .header__menu {
     position: absolute;
     top: 50px;
     right: 10px;
     height: 200px;
     width: 150px;
-    background-color:white;
+    background-color: white;
     border: 0.5px solid gray;
     border-radius: 5px;
-}
+    padding: 10px;
+  }
+  .header__menu a {
+    text-decoration: none;
+    color: black;
+  }
+  .header__menu .signout {
+    display: flex;
+    cursor: pointer;
+  }
