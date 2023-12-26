@@ -85,6 +85,20 @@ const Header = () => {
           </div>
           {openMenu && (
             <div className="header__menu">
+              <Link to={"/user"}>
+                <div
+                  className="user"
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    borderRadius: "5px",
+                    padding: "8px",
+                    backgroundColor: "#f3f2ef",
+                  }}
+                >
+                  <Avatar /> <span>View Profile</span>
+                </div>
+              </Link>
               <Link to={"/premium"}>
                 <p>Try Premium</p>
               </Link>
