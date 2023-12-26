@@ -4,7 +4,7 @@
   text-align: center;
 }
 .loginScreen img {
-  width: 200px;
+  width: 70px;
   margin-bottom: 20px;
 }
 .loginScreen input {
@@ -31,5 +31,4 @@
 }
 .btn {
   width: 100%;
-  background-color: #0a66c2;
 }

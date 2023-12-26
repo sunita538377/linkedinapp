@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import { setToken, setUser } from "../../Redux/Authentication";
 import { Button } from "@mui/material";
+import logo from "../../assests/linkedin_logo.avif";
 
 const Login = () => {
   // const [signUp, setSignUp] = useState(false);
@@ -54,10 +55,7 @@ const Login = () => {
     <>
       <div className="loginScreen">
         <ToastContainer />
-        <img
-          src="https://www.seekpng.com/png/detail/371-3715298_adverties-on-linkedin-logo-no-background.png"
-          alt="logo"
-        />
+        <img src={logo} alt="logo" />
         <form onSubmit={login}>
           <input
             type="email"
@@ -71,7 +69,12 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <Button type="submit" onClick={login} className="btn">
+          <Button
+            type="submit"
+            onClick={login}
+            className="btn"
+            style={{ backgroundColor: "#0a66c2", color: "white" }}
+          >
             Sign In
           </Button>
           <h4>
