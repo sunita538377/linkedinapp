@@ -6,7 +6,7 @@ import PrivateRoute from "./PrivateRoute";
 import { Home } from "./Pages/home/Home";
 import "react-toastify/dist/ReactToastify.css";
 import Subscription from "./Subscription";
-import User from "./UserProfile";
+import UserProfile from "./Pages/UserProfile/UserProfile";
 
 function App() {
   const user = null;
@@ -19,7 +19,7 @@ function App() {
           <Route path="/" element={<PrivateRoute />}>
             <Route path="/" element={<Home />} />
             <Route path="/premium" element={<Subscription />} />
-            <Route path="/user__Profile" element={<User/>}/>
+            <Route path="user" element={<UserProfile />} />
           </Route>
         </Routes>
       </BrowserRouter>
