@@ -57,3 +57,60 @@
     justify-content: space-between;
    
 }
+.posts {
+  background-color: #fff;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+.posts .post__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.posts .post__header .post__headerLeft {
+  display: flex;
+  align-items: center;
+}
+.posts .post__header .post__profile__details h3 {
+  font-size: 14px;
+  margin: 0px;
+  margin-left: 10px;
+}
+.posts .post__header .post__profile__details p {
+  font-size: 12px;
+  margin: 0px;
+  margin-left: 10px;
+}
+.post__body {
+  font-size: 14px;
+  padding: 20px 0px;
+}
+.post__footer {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #ebe8e8;
+  padding-top: 10px;
+}
+.post__footer .footer__options {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+.post__footer .footer__options:hover {
+  background-color: #eee;
+}
+.post__footer .footer__options svg {
+  margin-right: 10px;
+  color: #666666;
+}
+.post__footer .footer__options span {
+  color: #666666;
+  font-size: 12px;
+}
+.like__count {
+  display: flex;
+  justify-content: space-between;
+}
