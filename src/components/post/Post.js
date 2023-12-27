@@ -18,30 +18,18 @@ const Post = ({
   commentCount,
 }) => {
   const [openComment, setOpenComment] = useState(false);
+  const [likCount, setLikCount] = useState(likeCount);
+  const [comentCount, setComentCount] = useState(commentCount);
+  const [isLiked, setIsliked] = useState(false);
 
   const commentHandler = () => {
     setOpenComment(!openComment);
   };
 
-  //    const [likes, setLikes] = useState(0);
-
-  // useEffect(() => {
-  //    const fetchLikes = async () => {
-  //       try {
-  //         const response = await fetch("https://academics.newtonschool.co/api/v1/linkedin/like/:postId", {
-  //          headers: {
-  //             "projectID": "f104bi07c490",
-  //           },
-  //         });
-  //         const data = await response.json();
-  //         setLikes(data.likes);
-  //       } catch (error) {
-  //         console.error('Error fetching likes:', error);
-  //       }
-  //     };
-
-  //     fetchLikes();
-  //   }, []);
+  const IncrementCount = () => {
+    setComentCount(comentCount + 1);
+  };
+ 
   const likeHandle = async (postId) => {
     const token = localStorage.getItem("facebook-token");
     const id = postId;
@@ -50,7 +38,7 @@ const Post = ({
       const liked = await fetch(
         `https://academics.newtonschool.co/api/v1/facebook/like/${postId}`,
         {
-          method: "POST",
+          method: isLiked ? "DELETE" : "POST",
           headers: {
             Authorization: `Bearer ${token}`,
             projectID: "f104bi07c490",
@@ -65,6 +53,8 @@ const Post = ({
         toast.success(res.message, {
           position: toast.POSITION.TOP_CENTER,
         });
+        setIsliked(!isLiked);
+        setLikCount(isLiked ? likCount - 1 : likCount + 1);
       } else {
         toast.error(res.message, {
           position: toast.POSITION.TOP_CENTER,
@@ -95,8 +85,8 @@ const Post = ({
         <p>{caption}</p>
       </div>
       <div className="like__count">
-        <h5>{likeCount} Likes</h5>
-        <h5>{commentCount} Comments</h5>
+        <h5>{likCount} Likes</h5>
+        <h5>{comentCount} Comments</h5>
       </div>
       <div className="post__footer">
         <div className="footer__options" onClick={() => likeHandle(postId)}>
@@ -119,7 +109,7 @@ const Post = ({
           <span>Send</span>
         </div>
       </div>
-      {openComment && <Comments postId={postId} />}
+      {openComment && <Comments postId={postId} IncrementCount={IncrementCount}/>}
     </div>
   );
 };

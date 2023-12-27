@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./comments.css";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import { Avatar } from "@mui/material";
 
-const Comments = ({ postId }) => {
+const Comments = ({ postId,IncrementCount }) => {
   const [comments, setComments] = useState([]);
   const [commentText, setCommentText] = useState();
 
@@ -18,7 +19,7 @@ const Comments = ({ postId }) => {
     const fetchComments = async () => {
       try {
         const response = await fetch(
-          `https://academics.newtonschool.co/api/v1/linkedin/post/${postId}/comments`,
+         ` https://academics.newtonschool.co/api/v1/linkedin/post/${postId}/comments`,
           {
             method: "GET",
             headers: {
@@ -62,7 +63,7 @@ const Comments = ({ postId }) => {
     };
 
     fetch(
-      `https://academics.newtonschool.co/api/v1/linkedin/comment/${postId}`,
+     ` https://academics.newtonschool.co/api/v1/linkedin/comment/${postId}`,
       requestOptions
     )
       .then((response) => {
@@ -76,6 +77,7 @@ const Comments = ({ postId }) => {
             position: toast.POSITION.TOP_CENTER,
           });
         }
+        IncrementCount();
         return response.text();
       })
       .then((result) => console.log(result))
@@ -87,7 +89,8 @@ const Comments = ({ postId }) => {
       <div className="writebox">
         <form action="#">
           <div className="user">
-            <img src="" alt="" />
+            {/* <img src="" alt="" /> */}
+            <Avatar />
             <input
               type="text"
               placeholder="Add a comment..."
@@ -108,21 +111,21 @@ const Comments = ({ postId }) => {
         </form>
       </div>
       {comments?.map((comment) => (
-        <Link to={"/profile/id"}>
-          <div className="user" key={comment.id}>
-            <img src="" alt="" />
-            <div>
-              {/* <h5>{comment.name}</h5> */}
-              <p>{comment.content}</p>
-            </div>
-            <small style={{ fontSize: "12px" }}>
-              {new Date(comment.time).toLocaleTimeString([], {
-                hour: "numeric",
-                minute: "2-digit",
-              })}
-            </small>
+        <div className="user" key={comment.id}>
+          {/* <img src="" alt="" /> */}
+          <Link to={"/profile/id"}>
+            <Avatar />
+          </Link>
+          <div>
+            <p>{comment.content}</p>
           </div>
-        </Link>
+          <small style={{ fontSize: "12px" }}>
+            {new Date(comment.time).toLocaleTimeString([], {
+              hour: "numeric",
+              minute: "2-digit",
+            })}
+          </small>
+        </div>
       ))}
     </div>
   );
