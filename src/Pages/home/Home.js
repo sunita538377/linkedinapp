@@ -8,13 +8,12 @@ import { ToastContainer } from "react-toastify";
 export const Home = () => {
   return (
     <div className="app">
-      
       <Header />
-      
+
       <div className="app_body">
         <Sidebar />
         <Feed />
-        <ToastContainer  />
+        <ToastContainer />
         <Widget />
       </div>
     </div>

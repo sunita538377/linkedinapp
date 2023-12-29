@@ -22,7 +22,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/premium" element={<Subscription />} />
             <Route path="user" element={<UserProfile />} />
-            <Route path="/comingSoon" element={<ComingSoon/>}/>
+            <Route path="/comingSoon" element={<ComingSoon />} />
             <Route path="/search" element={<SearchPage />} />
           </Route>
         </Routes>

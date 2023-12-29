@@ -6,8 +6,6 @@ const Search = () => {
 
   const handleChange = (e) => {
     setSearchTerm(e.target.value);
-    // Call handleSearch here if you want to fetch results in real-time as the user types
-    // handleSearch();
   };
   return (
     <div className="search">
@@ -26,10 +24,8 @@ const Search = () => {
         <ul>
           {searchResults.map((result) => (
             <li key={result.id}>
-              {/* Display job posting details here */}
               <p>Title: {result.title}</p>
               <p>Author: {result.author}</p>
-              {/* Other job details */}
             </li>
           ))}
         </ul>

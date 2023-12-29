@@ -1,6 +1,6 @@
 import React from "react";
 import "./style/subscription.css";
-import subimg from "./assests/subs.jpeg"
+import subimg from "./assests/subs.jpeg";
 
 const Subscription = () => {
   return (
@@ -16,7 +16,7 @@ const Subscription = () => {
       <div className="options">
         <div className="option">
           <div className="name">InMail credits</div>
-          <img src={subimg} alt=""/>
+          <img src={subimg} alt="" />
           <div className="about">Connect with hiring managers</div>
           <div>
             Show your interest in an open role with InMail .it's 2.6x more
@@ -25,7 +25,7 @@ const Subscription = () => {
         </div>
         <div className="option">
           <div className="name">Who's Viewed Your Profile</div>
-          <img src={subimg} alt=""/>
+          <img src={subimg} alt="" />
           <div className="about">Turn views into opportunities</div>
           <div>
             See Who's Viewed your profile over the last 90 days,and who looks
@@ -34,7 +34,7 @@ const Subscription = () => {
         </div>
         <div className="option">
           <div className="name">LinkedIn Learning courses</div>
-          <img src={subimg} alt=""/>
+          <img src={subimg} alt="" />
           <div className="about">Sharpen your skills</div>
           <div>
             Show your interest in an open role with InMail .it's 2.6x more

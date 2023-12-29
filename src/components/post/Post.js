@@ -29,7 +29,7 @@ const Post = ({
   const IncrementCount = () => {
     setComentCount(comentCount + 1);
   };
- 
+
   const likeHandle = async (postId) => {
     const token = localStorage.getItem("facebook-token");
     const id = postId;
@@ -45,7 +45,6 @@ const Post = ({
           },
         }
       );
-      // if (liked.status === "success") {
       const res = await liked.json();
       console.log("liked", res);
 
@@ -109,7 +108,9 @@ const Post = ({
           <span>Send</span>
         </div>
       </div>
-      {openComment && <Comments postId={postId} IncrementCount={IncrementCount}/>}
+      {openComment && (
+        <Comments postId={postId} IncrementCount={IncrementCount} />
+      )}
     </div>
   );
 };

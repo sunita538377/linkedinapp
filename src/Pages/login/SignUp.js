@@ -34,7 +34,6 @@ export const SignUp = () => {
     const res = await response.json();
     console.log("register", response);
     if (res.status === "success") {
-      // console.log("sign up data", response.data);
       dispatch(setUser(res.data));
       dispatch(setToken(res.token));
 

@@ -20,7 +20,9 @@ const UserProfile = () => {
                 alt="bacground"
               />
               <div className="user__image">
-                <Avatar sx={{ width: 120, height: 120 ,border: "3px solid white"}} />
+                <Avatar
+                  sx={{ width: 120, height: 120, border: "3px solid white" }}
+                />
               </div>
             </div>
             <div className="detail">
@@ -42,7 +44,9 @@ const UserProfile = () => {
                     Magni natus, sed asperiores totam atque tenetur architecto
                     facilis aliquid.
                   </span>
-                  <span className="messaging">Connecting and Messaging feature is not available</span>
+                  <span className="messaging">
+                    Connecting and Messaging feature is not available
+                  </span>
                 </div>
               </div>
               <div

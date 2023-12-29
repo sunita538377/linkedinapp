@@ -13,12 +13,13 @@ const SearchPage = () => {
   return (
     <div>
       <Header />
-      <div style={{ display: "flex" }}>
-        <Sidebar />
-
+      <div style={{ display: "flex",paddingLeft:"250px"}}>
+        <div>
+        <Sidebar  />
+        </div>
         {searchReasult?.data?.map((post, index) => {
           return (
-            <Post
+            <Post 
               key={index}
               userName={post?.author?.name}
               caption={post?.content}
@@ -27,10 +28,12 @@ const SearchPage = () => {
               commentCount={post?.commentCount}
               postId={post._id}
             />
+           
           );
         })}
-
-        <Widget />
+        <div style={{paddingLeft:"250px" }}>
+        <Widget  />
+        </div>
       </div>
     </div>
   );

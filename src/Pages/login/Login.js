@@ -8,8 +8,6 @@ import { Button } from "@mui/material";
 import logo from "../../assests/linkedin_logo.avif";
 
 const Login = () => {
-  // const [signUp, setSignUp] = useState(false);
-  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
@@ -36,7 +34,6 @@ const Login = () => {
 
     response = await response.json();
     console.log("status", response.token);
-    // projectID: "f104bi07c490",
     if (response && response.token) {
       toast.success(response.status, {
         position: toast.POSITION.TOP_CENTER,
@@ -84,7 +81,6 @@ const Login = () => {
             </Link>
           </h4>
         </form>
-        {/* )} */}
       </div>
     </>
   );

@@ -2,7 +2,7 @@
     display: flex;
     flex: 0.25;
     flex-direction: column;
-    
+   
 }
 .sidebar .sidebar__profile{
   border-bottom: 1px solid #000;

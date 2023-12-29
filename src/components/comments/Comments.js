@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Avatar } from "@mui/material";
 
-const Comments = ({ postId,IncrementCount }) => {
+const Comments = ({ postId, IncrementCount }) => {
   const [comments, setComments] = useState([]);
   const [commentText, setCommentText] = useState();
 
@@ -19,7 +19,7 @@ const Comments = ({ postId,IncrementCount }) => {
     const fetchComments = async () => {
       try {
         const response = await fetch(
-         ` https://academics.newtonschool.co/api/v1/linkedin/post/${postId}/comments`,
+          ` https://academics.newtonschool.co/api/v1/linkedin/post/${postId}/comments`,
           {
             method: "GET",
             headers: {
@@ -63,7 +63,7 @@ const Comments = ({ postId,IncrementCount }) => {
     };
 
     fetch(
-     ` https://academics.newtonschool.co/api/v1/linkedin/comment/${postId}`,
+      ` https://academics.newtonschool.co/api/v1/linkedin/comment/${postId}`,
       requestOptions
     )
       .then((response) => {
@@ -89,7 +89,6 @@ const Comments = ({ postId,IncrementCount }) => {
       <div className="writebox">
         <form action="#">
           <div className="user">
-            {/* <img src="" alt="" /> */}
             <Avatar />
             <input
               type="text"
@@ -112,7 +111,6 @@ const Comments = ({ postId,IncrementCount }) => {
       </div>
       {comments?.map((comment) => (
         <div className="user" key={comment.id}>
-          {/* <img src="" alt="" /> */}
           <Link to={"/profile/id"}>
             <Avatar />
           </Link>

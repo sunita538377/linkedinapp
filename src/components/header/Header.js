@@ -8,12 +8,10 @@ import PeopleIcon from "@mui/icons-material/People";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { Avatar } from "@mui/material";
-import Subscription from "../../Subscription";
 import { Link, useNavigate } from "react-router-dom";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { useDispatch } from "react-redux";
 import { logout } from "../../Redux/Authentication";
-
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -25,7 +23,7 @@ const Header = () => {
   const handleMenu = () => {
     setOpenMenu(!openMenu);
   };
-  
+
   const handleSearch = async () => {
     try {
       const response = await fetch(
@@ -39,7 +37,7 @@ const Header = () => {
 
       const data = await response.json();
       setSearchResults(data); // Assuming the API response is an array of job postings
-      navigate("/search", { state: { searchResults: data } })
+      navigate("/search", { state: { searchResults: data } });
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -72,27 +70,21 @@ const Header = () => {
         </div>
       </div>
       <div className="header__right">
-        {/* <HeaderOptions Icon={HomeIcon} title="Home" />
-        <HeaderOptions Icon={PeopleIcon} title="My Network" onClick={ComingSoon}/>
-        <HeaderOptions Icon={BusinessCenterIcon} title="Jobs" onClick={ComingSoon}/>
-        <HeaderOptions Icon={NotificationsIcon} title="Notifications" onClick={ComingSoon}/> */}
         <Link to={"/"}>
-            <HeaderOptions Icon={HomeIcon} title="Home" />
-          </Link>
-          <Link to={"/comingSoon"}>
-            <HeaderOptions Icon={PeopleIcon} title="My Network" />
-          </Link >
-          <Link to={"/comingSoon"}>
-            <HeaderOptions Icon={BusinessCenterIcon} title="Jobs" />
-          </Link>
-          <Link to={"/comingSoon"}>
-            <HeaderOptions Icon={NotificationsIcon} title="Notifications" />
-            </Link>
-        {/* <HeaderOptions avatar={Avatar} title="Sunita Patra"/> */}
+          <HeaderOptions Icon={HomeIcon} title="Home" />
+        </Link>
+        <Link to={"/comingSoon"}>
+          <HeaderOptions Icon={PeopleIcon} title="My Network" />
+        </Link>
+        <Link to={"/comingSoon"}>
+          <HeaderOptions Icon={BusinessCenterIcon} title="Jobs" />
+        </Link>
+        <Link to={"/comingSoon"}>
+          <HeaderOptions Icon={NotificationsIcon} title="Notifications" />
+        </Link>
+
         <div className="userMenu" onClick={handleMenu}>
           <div className="header__options">
-            {/* {Icon && <Icon></Icon>} */}
-            {/* {avatar && <Avatar name={avatar} />} */}
             <Avatar />
             <span>{user.name}</span>
           </div>

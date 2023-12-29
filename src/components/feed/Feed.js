@@ -22,8 +22,7 @@ const Feed = () => {
           }
         );
         const res = await responce.json();
-        // console.log(res.data);
-        setFeedData(res);
+       setFeedData(res);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
