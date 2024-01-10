@@ -31,7 +31,7 @@ const Post = ({
   };
 
   const likeHandle = async (postId) => {
-    const token = localStorage.getItem("facebook-token");
+    const token = localStorage.getItem("linkedin-token");
     const id = postId;
     console.log("id", id);
     try {

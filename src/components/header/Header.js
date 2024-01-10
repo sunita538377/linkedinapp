@@ -86,7 +86,7 @@ const Header = () => {
         <div className="userMenu" onClick={handleMenu}>
           <div className="header__options">
             <Avatar />
-            <span>{user.name}</span>
+            <span>{user?.name}</span>
           </div>
           {openMenu && (
             <div className="header__menu">

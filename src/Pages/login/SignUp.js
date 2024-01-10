@@ -31,18 +31,18 @@ export const SignUp = () => {
         }),
       }
     );
-    const res = await response.json();
-    console.log("register", response);
-    if (res.status === "success") {
-      dispatch(setUser(res.data));
-      dispatch(setToken(res.token));
-
-      toast.success(res.status, {
+    
+    const response1 = await response.json();
+    console.log("status", response.token);
+    if (response1 && response1.token) {
+      toast.success(response1.status, {
         position: toast.POSITION.TOP_CENTER,
       });
       navigate("/");
+      dispatch(setUser(response1.data.user));
+      dispatch(setToken(response1.token));
     } else {
-      toast.error(res.message, {
+      toast.error(response1.message, {
         position: toast.POSITION.TOP_CENTER,
       });
     }
