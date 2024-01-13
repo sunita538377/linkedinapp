@@ -41,7 +41,7 @@ const Post = ({
           method: isLiked ? "DELETE" : "POST",
           headers: {
             Authorization: `Bearer ${token}`,
-            projectID: "f104bi07c490",
+            projectID: "f104bi07c410",
           },
         }
       );

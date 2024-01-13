@@ -21,7 +21,7 @@ export const SignUp = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          projectID: "f104bi07c490",
+          projectID: "f104bi07c410",
         },
         body: JSON.stringify({
           name: name,

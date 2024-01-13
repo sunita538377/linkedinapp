@@ -24,7 +24,7 @@ const Comments = ({ postId, IncrementCount }) => {
             method: "GET",
             headers: {
               Authorization: `Bearer ${token}`,
-              projectID: "f104bi07c490",
+              projectID: "f104bi07c410",
               "Content-Type": "application/json",
             },
           }
@@ -44,10 +44,11 @@ const Comments = ({ postId, IncrementCount }) => {
     fetchComments();
   }, [postId, comments]);
   console.log("comments", comments);
+
   const commentSend = () => {
-    const token = localStorage.getItem("facebook-token");
+    const token = localStorage.getItem("linkedin-token");
     var myHeaders = new Headers();
-    myHeaders.append("projectID", "f104bi07c490");
+    myHeaders.append("projectID", "f104bi07c410");
     myHeaders.append("Content-Type", "application/json");
     myHeaders.append("Authorization", "Bearer " + token);
 
@@ -63,12 +64,12 @@ const Comments = ({ postId, IncrementCount }) => {
     };
 
     fetch(
-      ` https://academics.newtonschool.co/api/v1/linkedin/comment/${postId}`,
+      `https://academics.newtonschool.co/api/v1/linkedin/comment/${postId}`,
       requestOptions
     )
       .then((response) => {
-        if (response.ok) {
-          setComments(...Comments, response.data);
+        if (response.status === "success") {
+          setComments([...comments, response.data.content]);
           toast.success(response.message, {
             position: toast.POSITION.TOP_CENTER,
           });

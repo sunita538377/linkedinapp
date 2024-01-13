@@ -29,7 +29,7 @@ const Feed = ({fed}) => {
           "https://academics.newtonschool.co/api/v1/linkedin/post",
           {
             headers: {
-              projectID: "f104bi07c490",
+              projectID: "f104bi07c410",
             },
           }
         );

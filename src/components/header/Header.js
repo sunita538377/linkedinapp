@@ -30,7 +30,7 @@ const Header = () => {
         `https://academics.newtonschool.co/api/v1/linkedin/post?search={"author.name":"${searchText}"}`,
         {
           headers: {
-            projectID: "f104bi07c490",
+            projectID: "f104bi07c410",
           },
         }
       );

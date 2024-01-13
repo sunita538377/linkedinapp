@@ -22,7 +22,7 @@ const Login = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          projectId: "f104bi07c490",
+          projectId: "f104bi07c410",
         },
         body: JSON.stringify({
           email: email,
