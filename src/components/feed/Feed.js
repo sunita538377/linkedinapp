@@ -97,9 +97,15 @@ const Feed = ({fed}) => {
           <form>
             <input type="text" placeholder="Start a post" value={textValue}
           onChange={(e) => {
-            e.preventDefault();
+            // e.preventDefault();
             setTextValue(e.target.value);
-          }}/>
+          }}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              addPost();
+            }
+          }}
+          />
             <input type="submit" onClick={addPost}/>
           </form>
         </div>

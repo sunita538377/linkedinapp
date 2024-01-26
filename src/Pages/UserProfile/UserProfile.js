@@ -40,9 +40,9 @@ const UserProfile = () => {
                   }}
                 >
                   <span>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Magni natus, sed asperiores totam atque tenetur architecto
-                    facilis aliquid.
+                    Passionate Front-End Developer | Transforming Vision into
+                    Engaging Web Experiences | Seeking Opportunities |Full Stack
+                    Developer
                   </span>
                   <span className="messaging">
                     Connecting and Messaging feature is not available
@@ -66,17 +66,15 @@ const UserProfile = () => {
           <div className="about">
             <h3>About</h3>
             <span>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
-              natus, sed asperiores totam atque tenetur architecto facilis
-              aliquid.
+              Recent Chemistry graduate with a fervent passion for web
+              development, actively engaged in self-study to enhance skills.
+              Demonstrates proficiency in HTML, CSS, and JavaScript, adept at
+              creatively addressing programming challenges and translating
+              intricate concepts into user-friendly interfaces. As a fresher,
+              brings adaptability, a robust work ethic, and an enthusiastic
+              commitment to contribute effectively to dynamic web development
+              teams.
             </span>
-            <sapn>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
-              natus, sed asperiores totam atque tenetur architecto facilis
-              aliquid.Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Magni natus, sed asperiores totam atque tenetur architecto facilis
-              aliquid.
-            </sapn>
           </div>
         </div>
         <div className="free">

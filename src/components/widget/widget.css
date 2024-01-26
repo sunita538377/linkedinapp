@@ -52,3 +52,8 @@ ul.widget__options p{
     position: sticky;
     top: 60px;
 }
+@media (max-width:768px) {
+    .widget{
+        display: none;
+    }
+}

@@ -167,3 +167,21 @@
   display: flex;
   cursor: pointer;
 }
+
+@media (max-width:768px) {
+  .header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+    height: 80px;
+    justify-content: center;
+    padding: 3px 5px;
+  }
+  .header__left{
+    justify-content: center;
+  }
+  .header__right{
+    justify-content: center;
+  }
+}

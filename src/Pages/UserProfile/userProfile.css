@@ -88,3 +88,32 @@
   color: #4a91c9;
   padding: 5px;
 }
+
+@media (max-width:768px) {
+  .user__Profile{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+   justify-content: space-around;
+  }
+  
+  .user{
+    /* flex: 100%; */
+    width: 100vw;
+  }
+  .user__Details{
+    width: 100vw;
+    margin: 10px;
+  }
+  .about{
+    width: 100vw;
+    margin: 10px;
+    padding: 10px;
+  }
+  .free{
+    width: 100%;
+  }
+  .user__image{
+    left: 40px;
+  }
+}
